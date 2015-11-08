@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+<body>
+<div id="view">
+    <section>
+        <h1 rv-text="item.title"></h1>
+
+        <p>Binding text using rv-text <code rv-text="item.text"></code>.</p>
+
+        <p>Text Value: <input rv-input="item.text"></p>
+    </section>
+    <section>
+        <p>
+            Binding an array using rv-each
+            <code><span rv-text="item.tags | length"></span> tags</code>.
+        </p>
+
+        <p>
+            <input rv-value="item.newTag">
+            <button rv-on-click="vm.addTag">add</button>
+        </p>
+        <ul>
+            <li rv-each-tag="item.tags">
+                <span rv-text="tag.name"></span>
+                <button rv-on-click="vm.removeItem">remove</button>
+            </li>
+        </ul>
+    </section>
+</div>
+
+
+<script src="../rivets/dist/rivets.bundled.min.js"></script>
+<script src="todo.js"></script>
+</body>
+</html>

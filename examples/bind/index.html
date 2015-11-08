@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="view">
+		<input type="text" rv-value="vm.text">
+		<input type="text" rv-value="user.name">
+		<hr>
+		<p>result = {vm.text | toUpper} + {user.name}</p>
+		<p rv-text="vm.text | toUpper"></p>
+	</div>
+
+	<ul id="toDo">
+		<li rv-each-list="todo.todoList">
+			<p rv-text="list.name" rv-class-active="list.isCheck"></p>
+			<button rv-on-click="todo.removeItem">remove</button>
+			<input type="checkbox" rv-checked="list.isCheck">
+		</li>
+	</ul>
+
+<script src="../../rivets/dist/rivets.bundled.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
