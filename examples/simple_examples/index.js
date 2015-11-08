@@ -60,3 +60,25 @@ rivets.binders.io = {
 };
 
 rivets.bind(document.getElementById('ioBinder'), {m: ioData});
+
+/*--------------------component------------------*/
+rivets.components['clickable'] = {
+  template: function() {
+    return '<div>' +
+    			'<button rv-on-click="showContent">show content</button>' +
+    		'</div>';
+  },
+  initialize: function(el, data) {
+    return new clickableConstructor();
+  }
+};
+
+function clickableConstructor(){
+	this.content = "my awesome data";
+};
+
+clickableConstructor.prototype.showContent = function(ev, data){
+	alert(data.content);
+};
+
+rivets.bind(document.getElementById('clickableComponent', {}));
