@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<!-- simple binding -->
+	<div id="person">
+		<p rv-text="model.firstName"></p>
+		<p>{model.lastName}</p>
+		<button rv-on-click="model.updateName">update name</button>
+	</div>
+	<hr></hr>
+
+	<!-- formater -->
+	<div id="note">
+		<input type="text" rv-value="m.note1">
+		<input type="text" rv-value="m.note2">
+		<p>{m.note1 | toUpperCase} on {m.note2}</p>
+		<input type="number" rv-value="uah">
+		<output>{uah | toDollar}</output>
+	</div>
+	<hr></hr>
+
+	<!-- custom one-way binder -->
+	<p id="colorBinder" rv-color="m.color" rv-text="m.text"></p>
+	<hr></hr>
+
+	<!-- custom two-way binder -->
+	<div id="ioBinder">
+		<input type="text" rv-io="m.text">
+		<p rv-text="m.text"></p>
+	</div>
+	<hr></hr>
+
+
+	<script src="../../rivets/dist/rivets.bundled.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 var view = document.getElementById('view');
 
 var model = {
-	text: ''
+	text: '',
+	markup: '<div><p>!!!!</p></div>'
 };
 
 var user = {
