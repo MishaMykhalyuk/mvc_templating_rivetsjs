@@ -11,16 +11,29 @@ var person = document.getElementById('person');
 
 rivets.bind(person, {model: personData});
 
-/*-----------------formater-------------------*/
+/*-----------------formaters-------------------*/
 var noteData = {
 	note1: "I have learned the rivets.js",
-	note2: "monday"
+	note2: "monday",
+	price: 20,
+	getPrice: function(){
+		console.log(noteData.price);
+	}
 };
 
 var noteWrapper = document.getElementById('note');
 
 rivets.formatters.toUpperCase = function(value){
 	return value.toUpperCase();
+};
+
+rivets.formatters.currency = {
+	read: function(value) {
+		return (value / 100).toFixed(2);
+	},
+	publish: function(value) {
+		return Math.round(parseFloat(value) * 100);
+	}
 };
 
 rivets.formatters.toDollar = function(value){
@@ -64,12 +77,12 @@ rivets.bind(document.getElementById('ioBinder'), {m: ioData});
 /*--------------------component------------------*/
 rivets.components['clickable'] = {
   template: function() {
-    return '<div>' +
-    			'<button rv-on-click="showContent">show content</button>' +
-    		'</div>';
+	return '<div>' +
+				'<button rv-on-click="showContent">show content</button>' +
+			'</div>';
   },
   initialize: function(el, data) {
-    return new clickableConstructor();
+	return new clickableConstructor();
   }
 };
 

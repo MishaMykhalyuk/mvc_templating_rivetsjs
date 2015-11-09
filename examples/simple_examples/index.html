@@ -20,6 +20,8 @@
 		<p>{m.note1 | toUpperCase} on {m.note2}</p>
 		<input type="number" rv-value="uah">
 		<output>{uah | toDollar}</output>
+		<input rv-value="m.price | currency">
+		<button rv-on-click="m.getPrice">get price</button>
 	</div>
 	<hr></hr>
 
