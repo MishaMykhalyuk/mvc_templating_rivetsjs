@@ -81,4 +81,21 @@ clickableConstructor.prototype.showContent = function(ev, data){
 	alert(data.content);
 };
 
-rivets.bind(document.getElementById('clickableComponent', {}));
+rivets.bind(document.getElementById('clickableComponent'), {});
+
+/*---------------computed properties---------------*/
+var durationModel = {
+	duration: function(){
+		console.log("duration function called");
+	},
+	start: 1,
+	end: 10,
+	updateStart: function(){
+		durationModel.start = 22;
+	},
+	updateEnd: function(){
+		durationModel.end = 100;
+	}
+};
+
+rivets.bind(document.getElementById('duration'), durationModel);

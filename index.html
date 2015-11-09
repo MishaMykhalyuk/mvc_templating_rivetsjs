@@ -217,6 +217,7 @@
     		<ul>
     			<li>MVC</li>
     			<li>MVP</li>
+    			<li>MVI</li>
     			<li><mark>MVVM</mark></li>
     		</ul>
     	</div>
@@ -293,13 +294,16 @@
 
 	<section class="slide">
 		<div>
-			<h2>Перед початком роботи</h2>
+			<h2 style="margin-bottom: 32px">Перед початком роботи</h2>
 			<pre>
 				<code>rivets.configure({</code>
 				<code>	prefix: 'rv',</code>
 				<code>	preloadData: true,</code>
 				<code>	rootInterface: '.',</code>
 				<code>	templateDelimiters: ['{', '}'],</code>
+				<code>	handler: function(target, event, binding){</code>
+				<code>	  this.call(target, event, binding.view.models)</code>
+				<code>  }</code>
 				<code>})</code>
 			</pre>
 		</div>
@@ -310,7 +314,7 @@
 			<h2>Templates</h2>
 			<pre>
 				<code>&lt;section id="userInfo"&gt;</code>
-				<code>	&lt;h3&gt;<mark>{</mark>user.name<mark>}</mark>&lt;/h3&gt;</code>
+				<code>	&lt;h3&gt;<mark>{</mark>user.firstName<mark>}</mark>&lt;/h3&gt;</code>
 				<code>&lt;section&gt;</code>
 			</pre>
 		</div>
@@ -539,8 +543,8 @@
 		-->
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
-    <script src="rivets/dist/rivets.bundled.min.js"></script>
-    <script src="examples/input-otuput.js"></script>
+    <script src="./rivets/dist/rivets.bundled.min.js"></script>
+    <script src="./input-output.js"></script>
 	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
