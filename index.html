@@ -22,21 +22,21 @@
 		}
 		.justify-wrapper div{
 			display: flex;
-  			justify-content: center;
-  			align-items: center;
-  			height: 400px;
+			justify-content: center;
+			align-items: center;
+			height: 400px;
 		}
 		.justify-wrapper div p{
 			margin-bottom: 30px;
 		}
 		.slide h2.mvc-intro{
 			margin: 80px 120px;
-  			font-size: 60px;
+			font-size: 60px;
 		}
 		.binders h3,
 		.formatters h3{
 			font-size: 40px;
-  			color: #666;
+			color: #666;
 		}
 	</style>
 
@@ -47,41 +47,47 @@
 	</header>
 	
 	<section class="slide shout">
-        <div>
-            <h2 style="font-size: 90px;">MVC. Rivets.js</h2>
-            <div class="author">
-                <p>
-                    Misha Mykhalyuk,<br />
-                    QAP courses 2015
-                </p>
-            </div>
-        </div>
-        <style>
-            .author{
-                position: absolute;
-                bottom: 10px;
-                right: 100px;
-            }
-            .author p {
-                margin-bottom: 0;
-                line-height: 30px;
-            }
-        </style>
-    </section>
+		<div>
+			<h2 style="font-size: 90px;">MVC. Data binding.<br />Rivets.js</h2>
+			<div class="author">
+				<p>
+					Misha Mykhalyuk<br />
+					mim@qapint.com
+				</p>
+			</div>
+		</div>
+		<style>
+			.author{
+				position: absolute;
+				bottom: 10px;
+				right: 100px;
+			}
+			.author p {
+				margin-bottom: 0;
+				line-height: 30px;
+			}
+		</style>
+	</section>
 
-    <section class="slide">
-        <div>
-            <h2>Історія паттерна</h2>
-            <ul>
-            	<li>Trygve Reenskaug, 1979</li>
-            	<li>Smalltalk-80</li>
-            	<li>Gang of Four, 1994</li>
-            </ul>
-        </div>
-    </section>
+	<section class="slide shout">
+		<div>
+			<h2>MVC</h2>
+		</div>
+	</section>
 
 	<section class="slide cover white">
 		<img style="width: 100%; height: auto; margin-top: 80px;" src="pictures/MVC.png">
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Історія паттерна</h2>
+			<ul>
+				<li>Trygve Reenskaug, 1979</li>
+				<li>Smalltalk-80</li>
+				<li>Gang of Four, 1994</li>
+			</ul>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -204,35 +210,28 @@
 		</div>
 	</section>
 
-    <section class="slide">
-        <div>
-            <h2>Observer (Publish/Subscribe)</h2>
+	<section class="slide">
+		<div>
+			<h2>Observer (Publish/Subscribe)</h2>
 			<img src="pictures/observer.jpg" style="display: block; margin: auto; width: 720px;">
-        </div>
-    </section>
-
-    <section class="slide">
-    	<div>
-    		<h2>MV*</h2>
-    		<ul>
-    			<li>MVC</li>
-    			<li>MVP</li>
-    			<li>MVI</li>
-    			<li><mark>MVVM</mark></li>
-    		</ul>
-    	</div>
-    </section>
-
-    <section class="slide">
-        <div>
-            <h2>MVVM</h2>
-			<img src="pictures/mvvm.png" style="display: block; margin: auto;">
-        </div>
-    </section>
+		</div>
+	</section>
 
 	<section class="slide">
 		<div>
-			<h2>Data binding - процес, який відповідає за постійну синхронізацію моделі та представлення</h2>
+			<h2>MV*</h2>
+			<ul>
+				<li>MVC</li>
+				<li>MVP</li>
+				<li>MVI</li>
+				<li>MVVM</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><b>Data binding - процес, який відповідає за постійну синхронізацію моделі та представлення</h2>
 		</div>
 	</section>
 
@@ -280,17 +279,17 @@
 		</div>
 	</section>
 
-    <section class="slide">
-        <div>
-            <h2>Як би ви реалізували таку поведінку без data-binding'а?</h2>
-            <div id="view">
-                <input type="text" rv-value="model.t"/>
-                <p style="text-align: center; font-size: 50px" rv-text="model.t"></p>
-                <p style="text-align: center; font-size: 30px" rv-text="model.t"></p>
-                <p style="text-align: center; font-size: 10px" rv-text="model.t"></p>
-            </div>
-        </div>
-    </section>
+	<section class="slide">
+		<div>
+			<h2>Як би ви реалізували таку поведінку без data-binding'а?</h2>
+			<div id="view">
+				<input type="text" rv-value="model.t"/>
+				<p style="text-align: center; font-size: 50px" rv-text="model.t"></p>
+				<p style="text-align: center; font-size: 30px" rv-text="model.t"></p>
+				<p style="text-align: center; font-size: 10px" rv-text="model.t"></p>
+			</div>
+		</div>
+	</section>
 
 	<section class="slide">
 		<div>
@@ -335,6 +334,13 @@
 		</div>
 	</section>
 
+	<section class="slide">
+		<div>
+			<h2>Binder</h2>
+			<h3><mark>Binder</mark> - це набір інструкцій, які "говорять" Rivets.js, як оновлювати DOM, коли змінюються властивості, що спостерігаються.</h3>
+		</div>
+	</section>
+
 	<section class="slide binders">
 		<div>
 			<h2>Binders</h2>
@@ -346,21 +352,21 @@
 		</div>
 	</section>
 
-    <section class="slide binders">
-        <div>
-            <h2>Binders</h2>
-            <h3>show</h3>
-            <code>&lt;button <mark>rv-show</mark>="user.admin"&gt;Remove&lt;/button&gt;</code>
-        </div>
-    </section>
+	<section class="slide binders">
+		<div>
+			<h2>Binders</h2>
+			<h3>show</h3>
+			<code>&lt;button <mark>rv-show</mark>="user.admin"&gt;Remove&lt;/button&gt;</code>
+		</div>
+	</section>
 
-    <section class="slide binders">
-        <div>
-            <h2>Binders</h2>
-            <h3>value</h3>
-            <code>&lt;input <mark>rv-value</mark>="item.name"&gt;</code>
-        </div>
-    </section>
+	<section class="slide binders">
+		<div>
+			<h2>Binders</h2>
+			<h3>value</h3>
+			<code>&lt;input <mark>rv-value</mark>="item.name"&gt;</code>
+		</div>
+	</section>
 
 	<section class="slide binders">
 		<div>
@@ -370,29 +376,29 @@
 		</div>
 	</section>
 
-    <section class="slide binders">
-        <div>
-            <h2>Binders</h2>
-            <h3>checked</h3>
-            <code>&lt;input type="checkbox" <mark>rv-checked</mark>="item.enabled"&gt;</code>
-        </div>
-    </section>
+	<section class="slide binders">
+		<div>
+			<h2>Binders</h2>
+			<h3>checked</h3>
+			<code>&lt;input type="checkbox" <mark>rv-checked</mark>="item.enabled"&gt;</code>
+		</div>
+	</section>
 
-    <section class="slide binders">
-        <div>
-            <h2>Binders</h2>
-            <h3>on-[event]</h3>
-            <code>&lt;button <mark>rv-on-click</mark>="item.destroy"&gt;Remove&lt;/button&gt;</code>
-        </div>
-    </section>
+	<section class="slide binders">
+		<div>
+			<h2>Binders</h2>
+			<h3>on-[event]</h3>
+			<code>&lt;button <mark>rv-on-click</mark>="item.destroy"&gt;Remove&lt;/button&gt;</code>
+		</div>
+	</section>
 
-    <section class="slide binders">
-        <div>
-            <h2>Binders</h2>
-            <h3>class-[classname]</h3>
-            <code>&lt;p <mark>rv-class-completed</mark>="todo.done"&gt;{todo.name}&lt;/p&gt;</code>
-        </div>
-    </section>
+	<section class="slide binders">
+		<div>
+			<h2>Binders</h2>
+			<h3>class-[classname]</h3>
+			<code>&lt;p <mark>rv-class-completed</mark>="todo.done"&gt;{todo.name}&lt;/p&gt;</code>
+		</div>
+	</section>
 
 	<section class="slide binders">
 		<div>
@@ -416,11 +422,11 @@
 		</div>
 	</section>
 
-    <section class="slide">
-        <div>
-            <h2>Створюємо власні байндери</h2>
-        </div>
-    </section>
+	<section class="slide">
+		<div>
+			<h2>Створюємо власні байндери</h2>
+		</div>
+	</section>
 
 	<section class="slide binders">
 		<div>
@@ -440,21 +446,21 @@
 			 <pre>
 				<code>rivets.binders.<mark>['my-binder']</mark> = {</code>
 				<code>  <mark>bind:</mark> function(el){</code>
-                <code>      model = this.model</code>
-                <code>      el.addEventListener('input', <mark>this.publish</mark>)</code>
-                <code>  }</code>
-                <code>  <mark>routine:</mark> function(el, value){}</code>
-                <code>  <mark>unbind:</mark> function (el){</code>
-                <code>      el.removeEventListener('input', <mark>this.publish</mark>)</code>
-                <code>  }</code>
+				<code>      model = this.model</code>
+				<code>      el.addEventListener('input', <mark>this.publish</mark>)</code>
+				<code>  }</code>
+				<code>  <mark>routine:</mark> function(el, value){}</code>
+				<code>  <mark>unbind:</mark> function (el){</code>
+				<code>      el.removeEventListener('input', <mark>this.publish</mark>)</code>
+				<code>  }</code>
 				<code>}</code>
 			</pre>
 		</div>
-        <style>
-            .slide.lh code{
-                line-height: 42px;
-            }
-        </style>
+		<style>
+			.slide.lh code{
+				line-height: 42px;
+			}
+		</style>
 	</section>
 
 	<section class="slide formatters">
@@ -509,16 +515,16 @@
 	<section class="slide">
 		<div>
 			<h2>Components</h2>
-            <pre>
-                <code>rivets.components['todo-item'] = {</code>
-                <code>   <mark>template:</mark> function(){</code>
-                <code>      return '&lt;button rv-on-click="inc"&gt;+&lt;/button&gt;</code>
-                <code>  },</code>
-                <code>   <mark>initialize:</mark> function(el, data){</code>
-                <code>      return new ItemController()</code>
-                <code>  }</code>
-                <code> }</code>
-            </pre>
+			<pre>
+				<code>rivets.components['todo-item'] = {</code>
+				<code>   <mark>template:</mark> function(){</code>
+				<code>      return '&lt;button rv-on-click="inc"&gt;+&lt;/button&gt;</code>
+				<code>  },</code>
+				<code>   <mark>initialize:</mark> function(el, data){</code>
+				<code>      return new ItemController()</code>
+				<code>  }</code>
+				<code> }</code>
+			</pre>
 		</div>
 	</section>
 
@@ -529,11 +535,11 @@
 		</div>
 	</section>
 
-    <section class="slide shout">
-        <div>
-            <h2>Запитання</h2>
-        </div>
-    </section>
+	<section class="slide shout">
+		<div>
+			<h2>Запитання</h2>
+		</div>
+	</section>
 
 	<!--
 		To hide progress bar from entire presentation
@@ -541,8 +547,8 @@
 		-->
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
-    <script src="./rivets/dist/rivets.bundled.min.js"></script>
-    <script src="./input-output.js"></script>
+	<script src="./rivets/dist/rivets.bundled.min.js"></script>
+	<script src="./input-output.js"></script>
 	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
 	<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
