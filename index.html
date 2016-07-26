@@ -267,7 +267,7 @@
 
 	<section class="slide">
 		<div>
-			<h2>Шо за Rivets.js?</h2>
+			<h2>Що за Rivets.js?</h2>
 			<blockquote>
 				Lightweight and powerful data binding + templating solution<br />
 				for building modern web applications.
@@ -282,7 +282,7 @@
 
     <section class="slide">
         <div>
-            <h2>Як би ви реалізували таку поведінку без MVC?</h2>
+            <h2>Як би ви реалізували таку поведінку без data-binding'а?</h2>
             <div id="view">
                 <input type="text" rv-value="model.t"/>
                 <p style="text-align: center; font-size: 50px" rv-text="model.t"></p>
@@ -298,7 +298,6 @@
 			<pre>
 				<code>rivets.configure({</code>
 				<code>	prefix: 'rv',</code>
-				<code>	preloadData: true,</code>
 				<code>	rootInterface: '.',</code>
 				<code>	templateDelimiters: ['{', '}'],</code>
 				<code>	handler: function(target, event, binding){</code>

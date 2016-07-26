@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Two-way formatter</h2>
+	
+	<div id="wrapper">
+		<input type="number" rv-value="model.value | percent">
+		<span> = </span>
+		<optup rv-html="model.value"></optup>
+	</div>
+
+	<script src="../../rivets/dist/rivets.bundled.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

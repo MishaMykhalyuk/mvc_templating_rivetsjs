@@ -32,6 +32,7 @@ rivets.formatters.currency = {
 		return (value / 100).toFixed(2);
 	},
 	publish: function(value) {
+		console.log("publish = ", value);
 		return Math.round(parseFloat(value) * 100);
 	}
 };

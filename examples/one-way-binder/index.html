@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>One-way binder</h2>
+	
+	<div id="wrapper">
+		<h1 rv-color="model.redraw < red green blue">My awesome binder</h1>
+
+		<input type="range" min="0" max="255" rv-value="model.red">
+		<input type="range" min="0" max="255" rv-value="model.green">
+		<input type="range" min="0" max="255" rv-value="model.blue">
+	</div>
+
+	<script src="../../rivets/dist/rivets.bundled.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
