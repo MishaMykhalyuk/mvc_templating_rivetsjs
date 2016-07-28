@@ -1,5 +1,3 @@
-console.log(rivets)
-
 var person = {
 	firstName: "Sergey",
 	lastName: "Esenin",
