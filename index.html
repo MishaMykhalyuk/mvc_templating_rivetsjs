@@ -105,7 +105,8 @@
 		<div class="justify-wrapper">
 			<div>
 				<p>
-					Сповіщує своїх <b>"спостерігачів"</b> про<br /> стан даних.
+					Нічого не знає про представлення<br /> та контроллери.<br /><br />
+					Змінюється за допомогою контроллера.
 				</p>
 			</div>
 			<img src="pictures/model_logo.png">
@@ -117,8 +118,7 @@
 		<div class="justify-wrapper">
 			<div>
 				<p>
-					Нічого не знає про представлення<br /> та контроллери.<br /><br />
-					Змінюється за допомогою контроллера.
+					Сповіщує своїх <b>"спостерігачів"</b> про<br /> стан даних.
 				</p>
 			</div>
 			<img src="pictures/model_logo.png">
@@ -306,17 +306,6 @@
 			</pre>
 		</div>
 	</section>
-
-	<section class="slide">
-		<div>
-			<h2>Templates</h2>
-			<pre>
-				<code>&lt;section id="userInfo"&gt;</code>
-				<code>	&lt;h3&gt;<mark>{</mark>user.firstName<mark>}</mark>&lt;/h3&gt;</code>
-				<code>&lt;section&gt;</code>
-			</pre>
-		</div>
-	</section>
 	
 	<section class="slide">
 		<div>
@@ -330,6 +319,17 @@
 				<code>	}</code>
 				<code>};</code>
 				<code>rivets.<mark>bind</mark>($('#userInfo'), {'user': user});</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Templates</h2>
+			<pre>
+				<code>&lt;section id="userInfo"&gt;</code>
+				<code>	&lt;h3&gt;<mark>{</mark>user.firstName<mark>}</mark>&lt;/h3&gt;</code>
+				<code>&lt;section&gt;</code>
 			</pre>
 		</div>
 	</section>
@@ -424,7 +424,7 @@
 
 	<section class="slide">
 		<div>
-			<h2>Створюємо власні байндери</h2>
+			<h2>Розширюємо Rivets.js</h2>
 		</div>
 	</section>
 
@@ -482,10 +482,10 @@
 			<h3>Two-way formatters</h3>
 			<pre class="line-height">
 				<code>rivets.formatters.<mark>currency</mark> = {</code>
-				<code>	read: function(value) {</code>
+				<code>	<mark>read:</mark> function(value) {</code>
 				<code>		return (value / 100).toFixed(2)</code>
 				<code>	},</code>
-				<code>	publish: function(value) {</code>
+				<code>	<mark>publish:</mark> function(value) {</code>
 				<code>		return Math.round(parseFloat(value) * 100)</code>
 				<code>	}</code>
 				<code>}</code>
